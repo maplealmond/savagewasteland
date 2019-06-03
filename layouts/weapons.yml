@@ -7,7 +7,7 @@ template:
   x: 37.5
   y: 37.5
   width: 750
-  height: 1050
+  height: 1000
 
 text:
   font: Monofonto
@@ -17,9 +17,13 @@ text:
 title:
   extends: text
   x: 90
-  y: 84
-  color: white
-  font_size: 10
+  y: 85
+  width: 540
+  height: 50
+  valign: middle
+  align: center
+  font_size: 12
+
 
 weight:
   extends: text
@@ -29,47 +33,45 @@ weight:
   height: 50
   valign: middle
   align: center
-  font_size: 8
+  font_size: 14
+
+value:
+  extends: text
+  x: 600
+  y: 950
+  width: 160
+  height: 50
+  valign: middle
+  align: right
+  font_size: 14
 
 # ---------------------------------
 
 art:
-  y: 140
-  x: 60
-  width: 700
+  y: 200
+  x: 200
+  width: 400
   height: :scale
   valign: middle
   align: center
 
 # ---------------------------------
 
-stats_background:
-  x: 50
-  y: 700
-  width: 722
-  height: 350
+icon:
+  height: 40
+  width: 40
 
 statistics:
   color: black
   font: Monofonto
-  font_size: 6
-
-stats_lead:
-  extends: statistics
-  x: 90
-  width: 200
-
-stats_entry:
-  extends: statistics
-  x: 210
-  width: 500
+  font_size: 8
 
 # ---------------------------------
 
-description:
+notes:
   x: 100
   y: 730
-  width: 625
+  width: 420
   height: 275
   valign: middle
   align: center
