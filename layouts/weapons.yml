@@ -1,0 +1,76 @@
+# Default Width 825
+# Default Height 1125
+
+
+# The "cut line", without rounded corners
+template:
+  x: 37.5
+  y: 37.5
+  width: 750
+  height: 1050
+
+text:
+  font: Monofonto
+
+# ---------------------------------
+
+title:
+  extends: text
+  x: 90
+  y: 84
+  color: white
+  font_size: 10
+
+weight:
+  extends: text
+  x: 695
+  y: 85
+  width: 50
+  height: 50
+  valign: middle
+  align: center
+  font_size: 8
+
+# ---------------------------------
+
+art:
+  y: 140
+  x: 60
+  width: 700
+  height: :scale
+  valign: middle
+  align: center
+
+# ---------------------------------
+
+stats_background:
+  x: 50
+  y: 700
+  width: 722
+  height: 350
+
+statistics:
+  color: black
+  font: Monofonto
+  font_size: 6
+
+stats_lead:
+  extends: statistics
+  x: 90
+  width: 200
+
+stats_entry:
+  extends: statistics
+  x: 210
+  width: 500
+
+# ---------------------------------
+
+description:
+  x: 100
+  y: 730
+  width: 625
+  height: 275
+  valign: middle
+  align: center
+  font_size: 6

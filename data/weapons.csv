@@ -1,0 +1,4 @@
+name,Qty,damage,range,weight,shots,rof,ammo,strength,notes
+10-mm Pistol,1,2d6 AP 2,12,3,12,1,10 mm,d4,
+Laser Pistol,1,2d6,10,3,9,1,Energy Cell,d4,Recoilless
+Hunting Rifle,1,3d6 AP 3,24,8,5,1,308,d6,Snapfire
