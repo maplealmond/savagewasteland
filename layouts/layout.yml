@@ -24,12 +24,11 @@ title:
   align: center
   font_size: 12
 
-
 weight:
   extends: text
-  x: 695
+  x: 670
   y: 85
-  width: 50
+  width: 100
   height: 50
   valign: middle
   align: center
@@ -57,6 +56,16 @@ art:
 
 # ---------------------------------
 
+condition:
+  height: 30,
+  width: 30,
+  color: 'black'
+  align: center
+  valign: middle
+  font_size: 6
+
+# ---------------------------------
+
 icon:
   height: 40
   width: 40
@@ -64,7 +73,19 @@ icon:
 statistics:
   color: black
   font: Monofonto
-  font_size: 8
+  height: 40
+  valign: middle
+  font_size: 10
+
+# ---------------------------------
+
+ammo_boxes:
+  font_size: 12
+  x: 90
+  y: 700
+  width: 530
+  height: 300
+  align: left
 
 # ---------------------------------
 
@@ -72,7 +93,7 @@ notes:
   x: 100
   y: 730
   width: 420
-  height: 275
-  valign: middle
+  height: 250
+  valign: bottom
   align: center
   font_size: 6

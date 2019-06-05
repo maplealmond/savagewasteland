@@ -1,40 +1,23 @@
-require 'squib'
-require 'squib/sample_helpers'
-require 'game_icons'
+require_relative 'deck.rb'
 
-require './models/guns.rb'
+data = Guns.new(Squib.xlsx file: 'data/guns.xlsx')
+Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
+  common(self, data)
 
-#`rm _output/*`
+  # Stats
+  data.icon_text_pair(context: self, x: 80, y: 680, name: "strength")
+  data.icon_text_pair(context: self, x: 80, y: 750, name: "ammo")
+  data.icon_text_pair(context: self, x: 350, y: 680, name: "damage")
+  data.icon_text_pair(context: self, x: 350, y: 750, name: "range")
 
-data = Squib.xlsx file: 'data/guns.xlsx'
-guns = Guns.new(data)
-
-Squib::Deck.new(cards: guns.name.size, layout: 'layouts/weapons.yml') do
-  background color: 'white'
-
-  # Artwork
-  png file: guns.file, layout: 'art'
-
-  # Template
-  png file: 'img/template.png', layout: 'template'
-
-  #Header
-  text str: guns.header, layout: 'title'
-  text str: guns.weight, layout: 'weight'
-  text str: guns.value, layout: 'value'
-
-
-  guns.icon_text_pair(context: self, x: 80, y: 680, name: "strength")
-  guns.icon_text_pair(context: self, x: 80, y: 750, name: "shots")
-
-  guns.icon_text_pair(context: self, x: 350, y: 680, name: "damage")
-  guns.icon_text_pair(context: self, x: 350, y: 750, name: "range")
-
+  # Condition Boxes
   6.times do |i|
-    rect x: 720, y: 680 + i * 40, height: 30, width: 30, color: 'black'
+    rect x: 720, y: 680 + i * 40, layout: "condition"
+    text x: 720, y: 680 + i * 40, layout: "condition", str: (i > 2 ? 2-i : ""), color: "gray"
   end
 
-  text str: guns.notes, layout: 'notes'
+  # Extras
+  text str: data.notes, layout: 'notes'
 
   # Output
   save_png prefix: "guns_"
