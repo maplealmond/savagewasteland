@@ -97,3 +97,11 @@ notes:
   valign: bottom
   align: center
   font_size: 6
+
+full_notes:
+  x: 100
+  y: 730
+  width: 550
+  height: 250
+  align: center
+  font_size: 6

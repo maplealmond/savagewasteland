@@ -40,7 +40,10 @@ class Models
   end
 
   def icon_text_pair(context:, x:, y:, name:)
-    context.svg x: x, y: y, data: send("#{name}_icon".to_s), layout: 'icon'
-    context.text x: x + 60, y: y, str: send(name), layout: 'statistics'
+    px = 80 + 300 * x
+    py = 680 + 70 * y
+
+    context.svg x: px, y: py, data: send("#{name}_icon".to_s), layout: 'icon'
+    context.text x: px + 60, y: py, str: send(name), layout: 'statistics'
   end
 end

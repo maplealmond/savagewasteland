@@ -6,11 +6,11 @@ class Guns < Models
   end
 
   def ammo
-    data['Ammo']
+    data['Ammo'].map{ |a| format_ammo(a) }
   end
 
   def damage
-    data['Damage'].zip(data['AP']).map{ |x| x[1].to_i > 0 ? "#{x[0]} (AP #{x[1]})" : x[0] }
+    data['Damage'].zip(data['AP']).map{ |x| x[1].to_i > 0 ? "#{x[0]} (AP#{x[1]})" : x[0] }
   end
 
   def range
@@ -18,11 +18,7 @@ class Guns < Models
   end
 
   def rof
-    data['ROF']
-  end
-
-  def ammo
-    data['Ammo']
+    data['ROF'].map{ |x| "ROF #{x}" }
   end
 
   def strength
@@ -39,5 +35,9 @@ class Guns < Models
 
   def strength_icon
     GameIcons.get('weight-lifting-up').recolor(fg: '#000000', bg_opacity: 0).string
+  end
+
+  def rof_icon
+    GameIcons.get('laser-sparks').recolor(fg: '#000000', bg_opacity: 0).string
   end
 end

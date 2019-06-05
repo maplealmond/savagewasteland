@@ -5,10 +5,13 @@ Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
   common(self, data)
 
   # Stats
-  data.icon_text_pair(context: self, x: 80, y: 680, name: "strength")
-  data.icon_text_pair(context: self, x: 80, y: 750, name: "ammo")
-  data.icon_text_pair(context: self, x: 350, y: 680, name: "damage")
-  data.icon_text_pair(context: self, x: 350, y: 750, name: "range")
+  data.icon_text_pair(context: self, x: 1, y: 0, name: "strength")
+  data.icon_text_pair(context: self, x: 1, y: 1, name: "ammo")
+
+
+  data.icon_text_pair(context: self, x: 0, y: 0, name: "damage")
+  data.icon_text_pair(context: self, x: 0, y: 1, name: "rof")
+  data.icon_text_pair(context: self, x: 0, y: 2, name: "range")
 
   # Condition Boxes
   6.times do |i|

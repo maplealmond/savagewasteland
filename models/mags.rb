@@ -6,7 +6,7 @@ class Mags < Models
   end
 
   def ammo
-    data['Ammo']
+    data['Ammo'].map{ |a| format_ammo(a) }
   end
 
   def capacity
