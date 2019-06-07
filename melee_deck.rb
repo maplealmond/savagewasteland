@@ -1,17 +1,12 @@
 require_relative 'deck.rb'
 
-data = Guns.new(Squib.xlsx file: 'data/guns.xlsx')
+data = Melee.new(Squib.xlsx file: 'data/melee.xlsx')
 Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
   common(self, data)
 
   # Stats
-  data.icon_text_pair(context: self, x: 1, y: 0, name: "strength")
-  data.icon_text_pair(context: self, x: 1, y: 1, name: "ammo")
-
-
   data.icon_text_pair(context: self, x: 0, y: 0, name: "damage")
-  data.icon_text_pair(context: self, x: 0, y: 1, name: "rof")
-  data.icon_text_pair(context: self, x: 0, y: 2, name: "range")
+  data.icon_text_pair(context: self, x: 0, y: 1, name: "strength")
 
   # Condition Boxes
   6.times do |i|
@@ -24,5 +19,5 @@ Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
 
   # Output
   # save_png prefix: "guns_"
-  save_pdf file: "guns.pdf", trim: 37.5
+  save_pdf file: "melee.pdf", trim: 37.5
 end

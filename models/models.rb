@@ -9,6 +9,10 @@ class Models
     data['Name']
   end
 
+  def file
+    name.map{ |name| "img/#{self.class.to_s.downcase}/#{name.downcase.gsub(" ","_")}.png" }
+  end
+
   def header
     name
   end

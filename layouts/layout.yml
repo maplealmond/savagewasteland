@@ -87,6 +87,14 @@ ammo_boxes:
   height: 300
   align: left
 
+usage_boxes:
+  font_size: 12
+  x: 90
+  y: 700
+  width: 625
+  height: 300
+  align: center
+
 # ---------------------------------
 
 notes:
@@ -96,12 +104,12 @@ notes:
   height: 250
   valign: bottom
   align: center
-  font_size: 6
+  font_size: 8
 
 full_notes:
   x: 100
-  y: 730
+  y: 750
   width: 550
   height: 250
-  align: center
-  font_size: 6
+  align: left
+  font_size: 8
