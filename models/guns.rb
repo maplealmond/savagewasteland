@@ -1,10 +1,6 @@
 require_relative 'weapons.rb'
 
 class Guns < Weapons
-  def ammo
-    data['Ammo'].map{ |a| format_ammo(a) }
-  end
-
   def range
     data['Range']
   end
