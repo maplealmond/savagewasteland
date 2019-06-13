@@ -1,6 +1,5 @@
 require_relative 'deck.rb'
 
-# Other
 data = Misc.new(Squib.xlsx file: 'data/misc.xlsx')
 Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
   common(self, data)
