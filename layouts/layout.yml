@@ -1,8 +1,6 @@
 # Default Width 825
 # Default Height 1125
 
-
-# The "cut line", without rounded corners
 template:
   x: 37.5
   y: 37.5
