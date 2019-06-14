@@ -2,20 +2,30 @@ require 'squib'
 require 'squib/sample_helpers'
 require 'game_icons'
 
+LAYOUTS = [
+    'layouts/frame.yml',
+    'layouts/item.yml',
+    'layouts/layout.yml'
+]
+
 project_root = File.dirname(File.absolute_path(__FILE__))
 Dir.glob(project_root + '/models/*') {|file| require file}
 
 def common(context, data)
-  context.background color: 'white'
+  context.png layout: 'art', file: data.file
 
-  # Artwork
-  context.png file: data.file, layout: 'art'
+  line layout: 'title_frame'
+  rect layout: 'stats_frame'
 
-  # Template
-  context.png file: 'img/template.png', layout: 'template'
+  text layout: 'title', str: data.header
 
-  # Header
-  context.text str: data.header, layout: 'title'
-  context.text str: data.weight, layout: 'weight'
-  context.text str: data.value, layout: 'value'
+
+  circle layout: 'weight_frame'
+  text layout: 'weight', str: data.weight
+
+  rect layout: 'backdrop'
+
+  rect layout: 'value_frame'
+  text layout: 'value', str: data.value
 end
+

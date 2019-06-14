@@ -1,56 +1,5 @@
-# Default Width 825
-# Default Height 1125
-
-template:
-  x: 37.5
-  y: 37.5
-  width: 750
-  height: 1000
-
 text:
   font: Monofonto
-
-# ---------------------------------
-
-title:
-  extends: text
-  x: 90
-  y: 85
-  width: 540
-  height: 50
-  valign: middle
-  align: center
-  font_size: 12
-
-weight:
-  extends: text
-  x: 670
-  y: 85
-  width: 100
-  height: 50
-  valign: middle
-  align: center
-  font_size: 14
-
-value:
-  extends: text
-  x: 600
-  y: 950
-  width: 160
-  height: 50
-  valign: middle
-  align: right
-  font_size: 14
-
-# ---------------------------------
-
-art:
-  y: 200
-  x: 200
-  width: 400
-  height: :scale
-  valign: middle
-  align: center
 
 # ---------------------------------
 
@@ -88,7 +37,7 @@ ammo_boxes:
 usage_boxes:
   font_size: 12
   x: 90
-  y: 700
+  y: 650
   width: 625
   height: 300
   align: center

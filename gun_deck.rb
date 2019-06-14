@@ -1,7 +1,7 @@
 require_relative 'deck.rb'
 
 data = Guns.new(Squib.xlsx file: 'data/guns.xlsx')
-Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layouts/layout.yml') do
+Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 
   # Stats
@@ -15,8 +15,8 @@ Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layout
 
   # Condition Boxes
   6.times do |i|
-    rect x: 720, y: 680 + i * 40, layout: "condition"
-    text x: 720, y: 680 + i * 40, layout: "condition", str: (i > 2 ? 2-i : ""), color: "gray"
+    rect x: 720, y: 650 + i * 40, layout: "condition"
+    text x: 720, y: 650 + i * 40, layout: "condition", str: (i > 2 ? 2-i : ""), color: "gray"
   end
 
   # Extras
@@ -24,12 +24,12 @@ Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layout
 
   # Output
   # save_png prefix: "guns_"
-  save_pdf file: "guns.pdf", trim: 37.5
+  save_pdf file: "guns.pdf"
 end
 
 # Ammo Boxes
 data = Boxes.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 1)
-Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layouts/layout.yml') do
+Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 
   # Check Boxes
@@ -37,12 +37,12 @@ Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layout
 
   # Output
   # save_png prefix: "boxes_"
-  save_pdf file: "boxes.pdf", trim: 37.5
+  save_pdf file: "boxes.pdf"
 end
 
 # Ammo Mags and Cells
 data = Mags.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 2)
-Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layouts/layout.yml') do
+Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 
   # Check Boxes
@@ -50,5 +50,5 @@ Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layout
 
   # Output
   # save_png prefix: "mags_"
-  save_pdf file: "mags.pdf", trim: 37.5
+  save_pdf file: "mags.pdf"
 end

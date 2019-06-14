@@ -1,0 +1,40 @@
+text:
+  font: Monofonto
+
+# ---------------------------------
+
+title:
+  extends: text
+  x: 90
+  y: 85
+  width: 540
+  height: 50
+  valign: middle
+  align: center
+  font_size: 12
+
+weight:
+  extends: text
+  x: 690
+  y: 85
+  width: 100
+  height: 50
+  valign: middle
+  align: center
+  font_size: 18
+
+value:
+  extends: text
+  x: 570
+  y: 955
+  width: 200
+  height: 130
+  valign: middle
+  align: right
+  font_size: 16
+
+art:
+  y: 230
+  x: 200
+  width: 400
+  height: :scale

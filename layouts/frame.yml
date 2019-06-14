@@ -1,0 +1,52 @@
+# --------------------------------
+# Title Frames
+
+frame:
+  stroke_color: '#325886'
+  stroke_width: 8
+
+background:
+  color: '#325886'
+  extends: frame
+
+backdrop:
+  extends: frame
+  fill_color: '#eeeeee00'
+  stroke_width: 80
+  stroke_strategy: 'stroke_first'
+  x: 0
+  y: 0
+  radius: 80
+  width: 825
+  height: 1125
+
+weight_frame:
+  extends: frame
+  fill_color: '#ffffff'
+  x: 750
+  y: 100
+  radius: 80
+
+title_frame:
+  extends: frame
+  x1: 0
+  y1: 180
+  x2: 740
+  y2: 180
+
+stats_frame:
+  extends: frame
+  fill_color: '#ffffff'
+  x: 0
+  y: 600
+  width: 825
+  height: 625
+
+value_frame:
+  extends: frame
+  fill_color: '#ffffff'
+  x: 550
+  y: 955
+  width: 240
+  height: 130
+  radius: 30
