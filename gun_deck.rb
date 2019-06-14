@@ -29,7 +29,7 @@ end
 
 # Ammo Boxes
 data = Boxes.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 1)
-Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
+Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layouts/layout.yml') do
   common(self, data)
 
   # Check Boxes
@@ -42,7 +42,7 @@ end
 
 # Ammo Mags and Cells
 data = Mags.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 2)
-Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
+Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layouts/layout.yml') do
   common(self, data)
 
   # Check Boxes
