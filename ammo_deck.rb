@@ -10,7 +10,7 @@ Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
 
   # Output
   # save_png prefix: "boxes_"
-  save_pdf file: "boxes.pdf", trim: 37.5
+  save_pdf file: "boxes.pdf"
 end
 
 # Ammo Mags and Cells
@@ -23,5 +23,5 @@ Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
 
   # Output
   # save_png prefix: "mags_"
-  save_pdf file: "mags.pdf", trim: 37.5
+  save_pdf file: "mags.pdf"
 end

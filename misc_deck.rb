@@ -8,5 +8,5 @@ Squib::Deck.new(width: 825, height: 1075, cards: data.name.size, layout: 'layout
 
   # Output
   # save_png prefix: "junk_"
-  save_pdf file: "misc.pdf", trim: 37.5
+  save_pdf file: "misc.pdf"
 end

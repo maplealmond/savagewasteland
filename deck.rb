@@ -19,7 +19,6 @@ def common(context, data)
 
   text layout: 'title', str: data.header
 
-
   circle layout: 'weight_frame'
   text layout: 'weight', str: data.weight
 

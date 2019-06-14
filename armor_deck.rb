@@ -19,5 +19,5 @@ Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
 
   # Output
   # save_png prefix: "armor_"
-  save_pdf file: "armor.pdf", trim: 37.5
+  save_pdf file: "armor.pdf"
 end
