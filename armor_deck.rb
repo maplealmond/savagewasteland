@@ -1,7 +1,7 @@
 require_relative 'deck.rb'
 
 data = Armor.new(Squib.xlsx file: 'data/armor.xlsx')
-Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
+Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 
   # Stats

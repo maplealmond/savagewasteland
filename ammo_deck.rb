@@ -2,7 +2,7 @@ require_relative 'deck.rb'
 
 # Ammo Boxes
 data = Boxes.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 1)
-Squib::Deck.new(cards: data.name.size, layout: 'layouts/layout.yml') do
+Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 
   # Check Boxes
