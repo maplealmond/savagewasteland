@@ -34,7 +34,7 @@ value:
   font_size: 16
 
 art:
-  y: 230
-  x: 200
-  width: 400
+  y: 220
+  x: 225
+  width: 350
   height: :scale
