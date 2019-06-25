@@ -1,4 +1,5 @@
-require_relative 'deck.rb'
+require_relative 'item.rb'
+require_relative '../models/misc'
 
 data = Misc.new(Squib.xlsx file: 'data/misc.xlsx')
 Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do

@@ -3,9 +3,9 @@ require 'squib/sample_helpers'
 require 'game_icons'
 
 LAYOUTS = [
-    'layouts/frame.yml',
-    'layouts/item.yml',
-    'layouts/layout.yml'
+    'layouts/items/frame.yml',
+    'layouts/items/item.yml',
+    'layouts/items/layout.yml'
 ]
 
 project_root = File.dirname(File.absolute_path(__FILE__))

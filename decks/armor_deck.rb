@@ -1,4 +1,5 @@
-require_relative 'deck.rb'
+require_relative 'item.rb'
+require_relative '../models/armor'
 
 data = Armor.new(Squib.xlsx file: 'data/armor.xlsx')
 Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do

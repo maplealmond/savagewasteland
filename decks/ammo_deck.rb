@@ -1,4 +1,4 @@
-require_relative 'deck.rb'
+require_relative '../item.rb'
 
 # Ammo Boxes
 data = Boxes.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 1)
