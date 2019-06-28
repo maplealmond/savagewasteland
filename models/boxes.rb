@@ -1,4 +1,4 @@
-require_relative 'models.rb'
+require_relative 'items.rb'
 
 class Boxes < Weapons
   def file
@@ -6,6 +6,6 @@ class Boxes < Weapons
   end
 
   def header
-    name.zip(capacity).map{ |n| "Box of #{format_ammo(n[0])} (#{n[1]})" }
+    list_merge(name, capacity) { |name, capacity| "Box of #{format_ammo(name)} (#{capacity})" }
   end
 end

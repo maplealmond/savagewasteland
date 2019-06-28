@@ -1,4 +1,4 @@
-require_relative 'models.rb'
+require_relative 'items.rb'
 
 class Mags < Weapons
   def file

@@ -1,6 +1,6 @@
-require_relative 'models.rb'
+require_relative 'items.rb'
 
-class Junk < Models
+class Junk < Items
   def file
     name.map{ |name| "img/junk/#{name.downcase.gsub(" ","_")}.png" }
   end

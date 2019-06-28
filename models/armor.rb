@@ -1,10 +1,6 @@
-require_relative 'models.rb'
+require_relative 'items.rb'
 
-class Armor < Models
-  def damage
-    data['Damage'].zip(data['AP']).map{ |x| x[1].to_i > 0 ? "#{x[0]}; AP#{x[1]}" : x[0] }
-  end
-
+class Armor < Items
   def armor
     data['Armor'].map{ |x| "+#{x}"}
   end

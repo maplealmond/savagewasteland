@@ -1,0 +1,78 @@
+text:
+  font: 'Impact'
+  color: 'white'
+  stroke_color: 'black'
+  stroke_width: 6
+  stroke_strategy: 'stroke_first'
+
+# ---------------------------------
+
+header:
+  extends: text
+  x: 0
+  y: 0
+  width: 754
+  height: 170
+  valign: middle
+  align: center
+  font_size: 16
+
+attribute:
+  extends: text
+  y: 230
+  width: 110
+  height: 60
+  valign: middle
+  align: center
+  font_size: 12
+
+derived:
+  extends: attribute
+  x: 620
+  width: 130
+  height: 110
+
+agility:
+  extends: attribute
+  x: 60
+
+smarts:
+  extends: attribute
+  x: 190
+
+spirit:
+  extends: attribute
+  x: 320
+
+strength:
+  extends: attribute
+  x: 450
+
+vigor:
+  extends: attribute
+  x: 580
+
+pace:
+  extends: derived
+  y: 370
+
+parry:
+  extends: derived
+  y: 500
+
+toughness:
+  extends: derived
+  y: 630
+
+carry:
+  extends: derived
+  y: 760
+
+textblock:
+  font: 'Impact'
+  color: 'black'
+  x: 20
+  y: 380
+  font_size: 8
+  width: 550
+  height: 660

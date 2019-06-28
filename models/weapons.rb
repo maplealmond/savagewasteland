@@ -1,6 +1,6 @@
-require_relative 'models.rb'
+require_relative 'items.rb'
 
-class Weapons < Models
+class Weapons < Items
   def file
     name.map{ |name| "img/weapons/#{name.downcase.gsub(" ","_")}.png" }
   end
@@ -10,7 +10,15 @@ class Weapons < Models
   end
 
   def damage
-    data['Damage'].zip(data['AP']).map{ |x| x[1].to_i > 0 ? "#{x[0]}; AP#{x[1]}" : x[0] }
+    list_merge(dmg, ap) { |dmg, ap| ap.to_i > 0 ?  "#{dmg}; AP#{ap}" : dmg }
+  end
+
+  def dmg
+    data['Damage']
+  end
+
+  def ap
+    data['AP']
   end
 
   def strength
