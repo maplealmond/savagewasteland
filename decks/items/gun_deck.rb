@@ -26,7 +26,7 @@ Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   text str: data.notes, layout: 'notes'
 
   # Output
-  # save_png prefix: "guns_"
+  save_png prefix: "guns_"
   save_pdf file: "guns.pdf"
 end
 

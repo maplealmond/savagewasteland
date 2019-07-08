@@ -8,7 +8,7 @@ class Items
     if block_given?
       lists.transpose.map{ |set| yield(*set) }
     else
-      lists.transpose.map{ |x| x.join(" ") }
+      lists.transpose.map{ |x| x.reject(&:nil?).join(" ") }
     end
   end
 
@@ -36,8 +36,27 @@ class Items
     data['Value'].map{ |v| "c#{v}" }
   end
 
+  def capacity
+    data['Capacity']
+  end
+
+  def boxes
+    capacity.map do |i|
+      i = i.to_i
+      div = div(i)
+      row = "☐" * div
+      remain = "☐" * (i % div)
+      ([row] * (i/div) + [remain]).join(" ")
+    end
+  end
+
+  def div(i)
+    return 6 if i == 6
+    return 5
+  end
+
   def notes
-    data['Notes']
+    data['Notes'].map{ |n| n ? n.split("|").map(&:strip).join("\n") : "" }
   end
 
   def format_ammo(ammo)

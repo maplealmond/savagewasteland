@@ -25,25 +25,6 @@ class Weapons < Items
     data['Strength']
   end
 
-  def capacity
-    data['Capacity']
-  end
-
-  def boxes
-    capacity.map do |i|
-      i = i.to_i
-      div = div(i)
-      row = "☐" * div
-      remain = "☐" * (i % div)
-      ([row] * (i/div) + [remain]).join(" ")
-    end
-  end
-
-  def div(i)
-    return 6 if i == 6
-    return 5
-  end
-
   def damage_icon
     GameIcons.get('glass-heart').recolor(fg: '#000000', bg_opacity: 0).string
   end

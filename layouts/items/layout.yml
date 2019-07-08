@@ -37,10 +37,11 @@ ammo_boxes:
 usage_boxes:
   font_size: 12
   x: 90
-  y: 650
+  y: 950
   width: 625
-  height: 300
-  align: center
+  height: 130
+  align: left
+  valign: middle
 
 # ---------------------------------
 
@@ -55,8 +56,8 @@ notes:
 
 full_notes:
   x: 100
-  y: 750
+  y: 630
   width: 550
-  height: 250
+  height: 550
   align: left
   font_size: 8
