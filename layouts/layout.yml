@@ -64,6 +64,12 @@ condition:
   valign: middle
   font_size: 6
 
+nocon:
+  height: 0
+  width: 0
+  x: 0
+  y: 0
+
 # ---------------------------------
 
 icon:

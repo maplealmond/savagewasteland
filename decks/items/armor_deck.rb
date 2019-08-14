@@ -16,7 +16,7 @@ Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   end
 
   # Extras
-  text str: data.notes, layout: 'full_notes'
+  text str: data.notes, layout: 'notes', align: 'left'
 
   # Output
   # save_png prefix: "armor_"

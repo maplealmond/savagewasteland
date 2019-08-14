@@ -18,15 +18,15 @@ Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
 
   # Condition Boxes
   6.times do |i|
-    rect x: 720, y: 650 + i * 40, layout: "condition"
-    text x: 720, y: 650 + i * 40, layout: "condition", str: (i > 2 ? 2-i : ""), color: "gray"
+    rect x: 720, y: 650 + i * 40, layout: "condition", range: data.condition(i)
+    text x: 720, y: 650 + i * 40, layout: "condition", range: data.condition(i), str: (i > 2 ? 2-i : ""), color: "gray"
   end
 
   # Extras
   text str: data.notes, layout: 'notes'
 
   # Output
-  save_png prefix: "guns_"
+  # save_png prefix: "guns_"
   save_pdf file: "guns.pdf"
 end
 

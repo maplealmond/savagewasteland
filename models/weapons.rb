@@ -29,6 +29,25 @@ class Weapons < Items
     GameIcons.get('glass-heart').recolor(fg: '#000000', bg_opacity: 0).string
   end
 
+  def condition(i)
+
+    # If condition == 6, print 0,1,2,3,4,5
+    # If condition == 5, print 1,2,3,4,5
+    # If condition == 4, print 2,3,4,5
+    # If condition == 3, print 3,4,5
+    # If condition == 2, print 4,5
+    # If condition == 1, print 5
+    # If condition == 0, print []
+
+    data["Condition"].map.with_index do |condition, index|
+      if (condition.to_i + i) >= 6
+        index
+      else
+        nil
+      end
+    end.compact.sort
+  end
+
   def strength_icon
     GameIcons.get('weight-lifting-up').recolor(fg: '#000000', bg_opacity: 0).string
   end
