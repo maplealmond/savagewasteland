@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://tpc.googlesyndication.com/safeframe/1-0-35/html/container.html?n=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>SafeFrame Container</title>
+    <script>
+(function(){var m=this||self;var n=String.prototype.trim?function(a){return a.trim()}:function(a){return/^[\s\xa0]*([\s\S]*?)[\s\xa0]*$/.exec(a)[1]},u=function(a,b){return a<b?-1:a>b?1:0};var v;a:{var w=m.navigator;if(w){var x=w.userAgent;if(x){v=x;break a}}v=""};var y=function(a){y[" "](a);return a};y[" "]=function(){};var B=function(a,b){var c=A;return Object.prototype.hasOwnProperty.call(c,a)?c[a]:c[a]=b(a)};var C=-1!=v.indexOf("Opera"),D=-1!=v.indexOf("Trident")||-1!=v.indexOf("MSIE"),E=-1!=v.indexOf("Edge"),F=-1!=v.indexOf("Gecko")&&!(-1!=v.toLowerCase().indexOf("webkit")&&-1==v.indexOf("Edge"))&&!(-1!=v.indexOf("Trident")||-1!=v.indexOf("MSIE"))&&-1==v.indexOf("Edge"),G=-1!=v.toLowerCase().indexOf("webkit")&&-1==v.indexOf("Edge"),H;a:{var I="",J=function(){var a=v;if(F)return/rv:([^\);]+)(\)|;)/.exec(a);if(E)return/Edge\/([\d\.]+)/.exec(a);if(D)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(G)return/WebKit\/(\S+)/.exec(a);if(C)return/(?:Version)[ \/]?(\S+)/.exec(a)}();J&&(I=J?J[1]:"");if(D){var K,L=m.document;K=L?L.documentMode:void 0;if(null!=K&&K>parseFloat(I)){H=String(K);break a}}H=I}var aa=H,A={},M=function(a){return B(a,function(){for(var b=0,c=n(String(aa)).split("."),f=n(String(a)).split("."),d=Math.max(c.length,f.length),g=0;0==b&&g<d;g++){var e=c[g]||"",h=f[g]||"";do{e=/(\d*)(\D*)(.*)/.exec(e)||["","","",""];h=/(\d*)(\D*)(.*)/.exec(h)||["","","",""];if(0==e[0].length&&0==h[0].length)break;b=u(0==e[1].length?0:parseInt(e[1],10),0==h[1].length?0:parseInt(h[1],10))||u(0==e[2].length,0==h[2].length)||u(e[2],h[2]);e=e[3];h=h[3]}while(0==b)}return 0<=b})};var N=null,O=null,ca=function(a){var b=a.length,c=3*b/4;c%3?c=Math.floor(c):"="===a[b-1]&&(c="="===a[b-2]?c-2:c-1);var f=new Uint8Array(c),d=0;ba(a,function(g){f[d++]=g});return f.subarray(0,d)},ba=function(a,b){function c(l){for(;f<a.length;){var k=a.charAt(f++),p=O[k];if(null!=p)return p;if(!/^[\s\xa0]*$/.test(k))throw Error("Unknown base64 encoding at char: "+k);}return l}da();for(var f=0;;){var d=c(-1),g=c(0),e=c(64),h=c(64);if(64===h&&-1===d)break;b(d<<2|g>>4);64!=e&&(b(g<<4&240|e>>2),64!=h&&b(e<<6&192|h))}},da=function(){if(!N){N={};O={};for(var a=0;65>a;a++)N[a]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(a),O[N[a]]=a,62<=a&&(O["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt(a)]=a)}};var P=function(a,b){if(a)for(var c in a)Object.prototype.hasOwnProperty.call(a,c)&&b.call(void 0,a[c],c,a)};var ea=function(a,b){var c=void 0===c?{}:c;this.error=a;this.context=b.context;this.msg=b.message||"";this.id=b.id||"jserror";this.meta=c};var fa=/^https?:\/\/(\w|-)+\.cdn\.ampproject\.(net|org)(\?|\/|$)/,ha=function(a,b){this.a=a;this.b=b},Q=function(a,b){this.url=a;this.g=!!b;this.depth=null};var ia=function(a){m.google_image_requests||(m.google_image_requests=[]);var b=m.document.createElement("img");b.src=a;m.google_image_requests.push(b)};var R=function(){this.c="&";this.f=!1;this.b={};this.i=0;this.a=[]},S=function(a,b){var c={};c[a]=b;return[c]},U=function(a,b,c,f,d){var g=[];P(a,function(e,h){(e=T(e,b,c,f,d))&&g.push(h+"="+e)});return g.join(b)},T=function(a,b,c,f,d){if(null==a)return"";b=b||"&";c=c||",$";"string"==typeof c&&(c=c.split(""));if(a instanceof Array){if(f=f||0,f<c.length){for(var g=[],e=0;e<a.length;e++)g.push(T(a[e],b,c,f+1,d));return g.join(c[f])}}else if("object"==typeof a)return d=d||0,2>d?encodeURIComponent(U(a,b,c,f,d+1)):"...";return encodeURIComponent(String(a))},V=function(a,b,c,f){a.a.push(b);a.b[b]=S(c,f)},ka=function(a){var b="https://pagead2.googlesyndication.com/pagead/gen_204?id=jserror&",c=ja(a)-27;if(0>c)return"";a.a.sort(function(p,r){return p-r});for(var f=null,d="",g=0;g<a.a.length;g++)for(var e=a.a[g],h=a.b[e],l=0;l<h.length;l++){if(!c){f=null==f?e:f;break}var k=U(h[l],a.c,",$");if(k){k=d+k;if(c>=k.length){c-=k.length;b+=k;d=a.c;break}else a.f&&(d=c,k[d-1]==a.c&&--d,b+=k.substr(0,d),d=a.c,c=0);f=null==f?e:f}}a="";null!=f&&(a=d+"trn="+f);return b+a+""},ja=function(a){var b=1,c;for(c in a.b)b=c.length>b?c.length:b;return 3997-b-a.c.length-1};var W=function(a){if(.01>Math.random())try{if(a instanceof R)var b=a;else b=new R,P(a,function(f,d){var g=b,e=g.i++;f=S(d,f);g.a.push(e);g.b[e]=f});var c=ka(b);c&&ia(c)}catch(f){}};var Y=function(a){try{var b=new R;b.f=!0;V(b,1,"context",507);a.error&&a.meta&&a.id||(a=new ea(a,{message:X(a)}));a.msg&&V(b,2,"msg",a.msg.substring(0,512));var c=[a.meta||{}];b.a.push(3);b.b[3]=c;c=m;a=[];var f=null;do{var d=c;try{var g;if(g=!!d&&null!=d.location.href)b:{try{y(d.foo);g=!0;break b}catch(z){}g=!1}var e=g}catch(z){e=!1}if(e){var h=d.location.href;f=d.document&&d.document.referrer||null}else h=f,f=null;a.push(new Q(h||""));try{c=d.parent}catch(z){c=null}}while(c&&d!=c);h=0;for(var l=a.length-1;h<=l;++h)a[h].depth=l-h;d=m;if(d.location&&d.location.ancestorOrigins&&d.location.ancestorOrigins.length==a.length-1)for(l=1;l<a.length;++l){var k=a[l];k.url||(k.url=d.location.ancestorOrigins[l-1]||"",k.g=!0)}var p=new Q(m.location.href,!1);d=null;var r=a.length-1;for(k=r;0<=k;--k){var q=a[k];!d&&fa.test(q.url)&&(d=q);if(q.url&&!q.g){p=q;break}}q=null;var la=a.length&&a[r].url;0!=p.depth&&la&&(q=a[r]);var t=new ha(p,q);t.b&&V(b,4,"top",t.b.url||"");V(b,5,"url",t.a.url||"");W(b)}catch(z){try{W({context:"ecmserr",rctx:507,msg:X(z),url:t&&t.a.url})}catch(pa){}}},X=function(a){var b=a.toString();a.name&&-1==b.indexOf(a.name)&&(b+=": "+a.name);a.message&&-1==b.indexOf(a.message)&&(b+=": "+a.message);if(a.stack){a=a.stack;var c=b;try{-1==a.indexOf(c)&&(a=c+"\n"+a);for(var f;a!=f;)f=a,a=a.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/,"$1");b=a.replace(/\n */g,"\n")}catch(d){b=c}}return b};var Z=F||G||D&&M(11)||E,ma=function(a){var b=/<startguard>(.*)<endguard>/g.exec(a);return b&&b[1]?b[1]:a};var na=/^([^;]+);(\d+);([\s\S]*)$/,oa=function(){var a=window.name,b=na.exec(a);if(null===b)throw Error("Cannot parse serialized data. "+a.substring(0,50));a=+b[2];var c=b[3];if(a>c.length)throw Error("Parsed content size doesn't match. "+a+":"+c.length);return{j:b[1],content:c.substr(0,a),h:c.substr(a)}};(function(a){if(window.name)try{var b=oa(),c=JSON.parse(b.h),f=c.encryptionMode;a(b.content,void 0===f?null:f,function(d){Z&&(window.name="");c.goog_safeframe_hlt&&(m.goog_safeframe_hlt=c.goog_safeframe_hlt);c._context&&(m.AMP_CONTEXT_DATA=c._context);m.sf_={v:b.j,cfg:c};var g=window;if(Z)g=g.document,g.open("text/html","replace"),g.write(d),g.close();else{var e;if(e=D&&M(7)&&!M(10))e=navigator.userAgent.match(/Trident\/([0-9]+.[0-9]+)/),e=6>(e?parseFloat(e[1]):0);if(e)a:{for(e=0;e<d.length;++e)if(127<d.charCodeAt(e)){e=!0;break a}e=!1}if(e){d=unescape(encodeURIComponent(d));e=Math.floor(d.length/2);for(var h=[],l=0;l<e;++l)h[l]=String.fromCharCode(256*d.charCodeAt(2*l+1)+d.charCodeAt(2*l));1==d.length%2&&(h[e]=d.charAt(d.length-1));d=h.join("")}g.goog_content=d;g.location.replace("javascript:window.goog_content")}},function(d){Y(d)})}catch(d){Y(d)}})(function(a,b,c){2===b&&(a=(new TextDecoder).decode(ca(ma(a))))&&(b=a.toLowerCase(),a=-1<b.indexOf("<!doctype")||-1<b.indexOf("<html")?a:"<html><head></head><body>"+a+"</body></html>");c(a)});}).call(this);
+    </script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="init();" style="margin:0px; cursor:pointer" onclick="hit()"><script src="./ext.js"></script><script>window.dicnf = {};</script><script data-jc="42">(function(){window.viewReq=[];function b(a){var c=new Image;c.src=a.replace("&amp;","&");viewReq.push(c)}function d(a){fetch(a,{keepalive:!0,credentials:"include",redirect:"follow",method:"get",mode:"no-cors"}).catch(function(){b(a)})}window.vu=function(a){window.fetch?d(a):b(a)};}).call(this);</script><script>vu("https://securepubads.g.doubleclick.net/pcs/view?xai\x3dAKAOjstI35fRSziqSQPsEO6r7bVu7UIFcWLJrtwUKz0bsfCcnQ_PlEb8TO16QRs8GQYjpySYr6wL_Hnez9ah835bMVZSWncMx0Xgi2GTImtYgVWsSdQUHy4nf92GUqFEfAR-DW9nolq4W6JKlsrIOSBfYwhPsXAQZzJG_EFfS9yLQvMUT0I9vkjpPIJzbNB1HHlxst7Xpo5XJEwY4RbsFErv0hOHgbfyCniMuHekAla_CGkRJ-BwdSdyjQ_xQpBk2fS5Z4X3CNKpHbJBq_l2hF5rZhWNcry2w-BaplpjYyLDsKE\x26sig\x3dCg0ArKJSzCFj3ZkeVd1MEAE\x26urlfix\x3d1\x26adurl\x3d")</script><div style="display:inline" class="GoogleActiveViewElement" data-google-av-cxn="https://pagead2.googlesyndication.com/pcs/activeview?xai=AKAOjsvk0UYHX6KeSFN9STPMUrC4vOFfmrMEiHixmbPviHZU4h_ZoKY8ajt6i06knOiBL6re1j1UY3UN73gVvLYQAwgWhpawWftk21-VhlgRX48&amp;sig=Cg0ArKJSzOMW97FJG3sCEAE" data-google-av-adk="1662382381" data-google-av-metadata="ud=1&amp;la=0&amp;alp=xai&amp;alh=3691026542&amp;xdi=0&amp;" data-google-av-override="-1" data-google-av-dm="2" data-google-av-immediate="" data-google-av-aid="0" data-google-av-naid="1" data-google-av-slift="" data-google-av-cpmav="" data-google-av-itpl="19" data-google-av-rs="4">
+
+
+    <!--<base href="https://edge.spiceworksstatic.com/service.client-interactive/2019/logmein/html5ads/173501/728x90/">--><base href=".">
+
+<meta name="ad.size" content="width=728,height=90">
+<title>RescueAssist_728x90</title>
+<!-- write your code here -->
+<script src="./createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js"></script>
+<script src="./RescueAssist_728x90.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("18F53931D14B7249AFCA0034E040AE73");
+	var lib=comp.getLibrary();
+	handleComplete({},comp);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	exportRoot = new lib.RescueAssist_728x90();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;            
+			stage.tickOnUpdate = false;            
+			stage.update();            
+			stage.tickOnUpdate = true;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<script>
+var clickTag = "https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvgFZZO14h_DcACYxJ6S3oB8nDseSWjd9zEvaKtUur86oLVyOihbqqLb3URTXXzNam-4fagjW8cLpOtVCCVjv0s1-QmDPPcyHw3-D2psxEq3IIqFPJgHbr9gvqlNlZp2Qik32bWeg3H4pE4yx7yAvqKLQMwnKJMX_UAEwINrXV4CWekU7ZUTRiiAKW8h_j1pmEMGqwX2uTYSVLzL7bVATpDqmohqWMn2Mm7RFtxF9D2ZbOMSjz2KCnYPSo_fuc3cgctqbA5NEtAHDg3Q7Y2oSLy5Yj1qiXiTdR0ITc&sig=Cg0ArKJSzIIm8DixOMRoEAE&urlfix=1&adurl=https://us-east-1.event.prod.bidr.io/log/clk/ox%3Fai%3DChEIgePoIxCyaRj28Muw4ozkAhIUCgpzcGljZXdvcmtzEAIYxQggpyQaAm94OOLNA0DQAUgBUgJveGAA%26audit_flag_wp%3DAAABbKVqAiDByEbXiyOtK7Qc_jwbm0D1MNOSsg%26redir_clk_trkr_prefix%3Dhttps%253A%252F%252Fwikia-d.openx.net%252Fw%252F1.0%252Frc%253Fts%253D2DAABBgABAAECAAIBAAsAAgAAAX8cGAp0WVZjbGZWUjVvHBb8nfr13oT06vcBFuf8zcmF9M2_mwEAHBbR7c2_iISMtlkWk9vyjaiLxqqWAQAW5szL1QsVBDgkMWZkZTdkNGItZTdmZC0wMGIyLTM0MmItMWM1NmUxYzVhNDY1ACwcFQIAHBUCABwVAgAAHCaU0eOBBBUEFQQm1N-1gAQWsq2agATW6hQW6hQW6hQWyAEWyAEWyAEWyAEW7h4AHBwsFoCxiqS77IOtKhbrsrXZ5-KA56UBAAAW8oyfgAQWlJO1gAQW8tqtgQQW_PHcgAQVGBwUtAEUsAsAFQQm7h4W7h4W7h4RNQ4ALCwWuJKqjcLSrfOhARazyer0hPDNgOIBABbmzMvVCwYo8oyfgAQWlJO1gAQW_PHcgAQW8tqtgQQYEHNwaWNld29ya3MtNTkxMDYW3ogfFu4eJQQWhAoYBU9wZW5YFQKWwsCfExERGAJPWAh-A3J0YoEALBZkFmQWZBZkAAw8OAljaGFuZ2UubWUAAAA%2526r%253D%26dest%3Dhttps://get.gotoassist.com/lp/media?cid=g2a_noam__dsp___spiceworks";
+function hit(){
+	window.open(clickTag);
+}
+</script>
+
+
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:728px; height:90px">
+		<canvas id="canvas" width="1456" height="180" style="position: absolute; display: block; background-color: rgb(255, 255, 255); width: 728px; height: 90px; cursor: pointer;"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:728px; height:90px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+
+</div><script src="./osd_listener.js"></script><script type="text/javascript">osdlfm(-1,'','B42-aNXNZXY_HO4Gjgwbu467oBgAAAAAQATgByAEJwAIC4AIA4AQBoAYW0ggFCIBhEAE','',1662382381,true,'ud\x3d1\x26la\x3d0\x26alp\x3dxai\x26alh\x3d3691026542\x26xdi\x3d0\x26',3,'CAASEuRorLW22GviOZ_1_7mieHxfqQ','https://pagead2.googlesyndication.com/pcs/activeview?xai\x3dAKAOjsvk0UYHX6KeSFN9STPMUrC4vOFfmrMEiHixmbPviHZU4h_ZoKY8ajt6i06knOiBL6re1j1UY3UN73gVvLYQAwgWhpawWftk21-VhlgRX48\x26sig\x3dCg0ArKJSzOMW97FJG3sCEAE','');</script><script>if (window.top && window.top.postMessage) {window.top.postMessage('{"key_value":[{"key":"qid","value":"CM-16bHijOQCFYHRwAod7rELbQ"}],"googMsgType":"adpnt"}','*');}</script><div style="bottom:0;right:0;width:728px;height:90px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB9SURBVBjTbVAJDsAgCIMf8P/XbvYAXIaJobEtlYj/StbpLlR4rai3BuVhHOZpBpGHG73QvKckZrf3Qp6t00mmqj65o6Pz0CgwHPwekEPKZa3/lc2pUGbllmjnkID/ndzeScjbcWCrMd7CNWFvkO5azmZLHNu7rentJI6C7gGWdQYrQv5opQAAAABJRU5ErkJggg==&#39;) !important;"></div><noscript class="MOAT-spiceworksdfp36308586125?moatClientLevel1=4493537013&amp;moatClientLevel2=2568952988&amp;moatClientLevel3=5115493103&amp;moatClientLevel4=138263965258&amp;moatClientSlicer1=7952090&amp;moatClientSlicer2=21831482143&amp;zMoatPS=&amp;zMoatAP="></noscript>
+<script src="./moatad(1).js" type="text/javascript"></script><img src="./iaja(1)" width="1" height="1" hidden="hidden" style="display:none !important;">
+
+  
+  
+  
+
+</body></html>
