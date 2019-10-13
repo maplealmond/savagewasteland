@@ -8,6 +8,6 @@ Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   text str: data.notes, layout: 'full_notes'
 
   # Output
-  # save_png prefix: "junk_"
+  # save_png prefix: "misc_"
   save_pdf file: "misc.pdf"
 end

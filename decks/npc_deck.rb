@@ -31,6 +31,6 @@ Squib::Deck.new(cards: data.name.size, layout: LAYOUTS, height: 1049, width: 754
   text str: data.textblock, markup: true, layout: 'textblock'
 
   # Output
-  save_png prefix: "npc_"
+  # save_png prefix: "npc_"
   save_pdf file: "npcs.pdf", gap: 30
 end

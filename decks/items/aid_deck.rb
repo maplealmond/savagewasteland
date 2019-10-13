@@ -12,6 +12,6 @@ Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   text str: data.boxes, layout: 'usage_boxes'
 
   # Output
-  save_png prefix: "aid"
+  # save_png prefix: "aid"
   save_pdf file: "aid.pdf"
 end
