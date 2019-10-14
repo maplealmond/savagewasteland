@@ -21,7 +21,7 @@ weight:
   height: 50
   valign: middle
   align: center
-  font_size: 18
+  font_size: 16
 
 value:
   extends: text

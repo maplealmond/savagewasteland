@@ -6,6 +6,6 @@ class Junk < Items
   end
 
   def header
-    name.map{ |n| "Junk, #{n}" }
+    name
   end
 end
