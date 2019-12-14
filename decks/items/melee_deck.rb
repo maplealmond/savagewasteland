@@ -1,7 +1,7 @@
 require_relative 'item.rb'
 require_relative '../../models/melee'
 
-data = Melee.new(Squib.xlsx file: 'data/melee.xlsx')
+data = Melee.new(Squib.xlsx file: 'data/melee.xlsx', explode: "Qty")
 Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 

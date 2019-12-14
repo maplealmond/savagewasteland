@@ -1,8 +1,7 @@
 require_relative 'item.rb'
 require_relative '../../models/aid'
 
-# Ammo Mags and Cells
-data = Aid.new(Squib.xlsx file: 'data/aid.xlsx')
+data = Aid.new(Squib.xlsx file: 'data/aid.xlsx', explode: "Qty")
 Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 

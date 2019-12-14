@@ -3,7 +3,7 @@ require_relative '../../models/guns'
 require_relative '../../models/boxes'
 require_relative '../../models/mags'
 
-data = Guns.new(Squib.xlsx file: 'data/guns.xlsx')
+data = Guns.new(Squib.xlsx file: 'data/guns.xlsx', explode: "Qty")
 Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 
@@ -31,7 +31,7 @@ Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
 end
 
 # Ammo Boxes
-data = Boxes.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 1)
+data = Boxes.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 1, explode: "Qty")
 Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 
@@ -44,7 +44,7 @@ Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
 end
 
 # Ammo Mags and Cells
-data = Mags.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 2)
+data = Mags.new(Squib.xlsx file: 'data/guns.xlsx', sheet: 2, explode: "Qty")
 Squib::Deck.new(cards: data.name.size, layout: LAYOUTS) do
   common(self, data)
 

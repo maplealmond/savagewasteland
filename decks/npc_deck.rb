@@ -10,7 +10,7 @@ LAYOUTS = [
 ]
 
 # NPCs
-data = Npcs.new(Squib.xlsx file: 'data/npcs.xlsx')
+data = Npcs.new(Squib.xlsx file: 'data/npcs.xlsx', explode: "Qty")
 Squib::Deck.new(cards: data.name.size, layout: LAYOUTS, height: 1049, width: 754) do
 
   png file: 'img/backgrounds/extra_front.png', layout: 'background'
